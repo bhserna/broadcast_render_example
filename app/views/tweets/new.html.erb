@@ -1,8 +1,0 @@
-<header>
-  <h1>New tweet</h1>
-  <%= link_to "Back to tweets", tweets_path, class: "btn" %>
-</header>
-
-<%= turbo_frame_tag @tweet do %>
-  <%= render "form", tweet: @tweet %>
-<% end %>

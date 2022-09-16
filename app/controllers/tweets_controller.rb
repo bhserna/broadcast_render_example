@@ -18,26 +18,17 @@ class TweetsController < ApplicationController
   def create
     @tweet = Tweet.new(tweet_params)
     @tweet.save
-
-    respond_to do |format|
-      format.html { @tweet.broadcast_prepend_to :tweets }
-    end
+    @tweet.broadcast_render_to :tweets, partial: "tweets/on_create"
   end
 
   def update
     @tweet.update(tweet_params)
-
-    respond_to do |format|
-      format.html { @tweet.broadcast_replace_to :tweets }
-    end
+    @tweet.broadcast_replace_to :tweets
   end
 
   def destroy
     @tweet.destroy
-
-    respond_to do |format|
-      format.html { @tweet.broadcast_remove_to :tweets }
-    end
+    @tweet.broadcast_render_to :tweets, partial: "tweets/on_destroy"
   end
 
   private

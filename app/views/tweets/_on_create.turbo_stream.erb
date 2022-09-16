@@ -1,0 +1,9 @@
+<%= turbo_stream.replace "new_tweet" do %>
+  <%= render "tweets/form", tweet: Tweet.new %>
+<% end %>
+
+<%= turbo_stream.prepend "tweets", tweet %>
+
+<%= turbo_stream.replace "tweets_count" do %>
+  <%= render "tweets/count", tweets: Tweet.all %>
+<% end %>

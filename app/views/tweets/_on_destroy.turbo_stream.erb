@@ -1,0 +1,5 @@
+<%= turbo_stream.remove tweet %>
+
+<%= turbo_stream.replace "tweets_count" do %>
+  <%= render "tweets/count", tweets: Tweet.all %>
+<% end %>
