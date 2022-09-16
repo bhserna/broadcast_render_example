@@ -1,0 +1,90 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "https://unpkg.com/open-props";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  border: var(--border-size-1) solid var(--gray-3);
+  border-radius: var(--radius-conditional-3);
+  box-shadow: var(--shadow-3);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-1);
+  margin: var(--size-8) auto;
+  width: 40rem;
+}
+
+header, .tweet, .container {
+  padding: var(--size-4);
+}
+
+.tweet, .container {
+  border-top: var(--border-size-1) solid var(--gray-3);
+}
+
+.tweet p {
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  gap: var(--size-2);
+  margin-top: var(--size-4);
+}
+
+.actions a {
+  color: var(--blue-4);
+}
+
+button, input[type="submit"], .btn {
+  background-color: white;
+  border: var(--border-size-1) solid var(--blue-3);
+  border-radius: var(--radius-conditional-3);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-0);
+  margin: 0;
+  padding: var(--size-1) var(--size-3);
+  color: var(--blue-4);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button:hover, input[type="submit"]:hover, .btn:hover {
+  background-color: var(--blue-0);
+}
+
+textarea {
+  width: 100%;
+  border: var(--border-size-1) solid var(--gray-4);
+  padding: var(--size-3);
+  margin: var(--size-2) 0;
+  font-size: var(--font-size-1);
+}
+
+.alert {
+  padding: var(--size-3);
+  background: var(--green-0);
+  border-top-left-radius:  var(--radius-conditional-3);
+  border-top-right-radius:  var(--radius-conditional-3);
+  color: var(--green-6);
+}
+
+.tweets-count {
+  float: right;
+}

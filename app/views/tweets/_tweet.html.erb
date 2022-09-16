@@ -1,0 +1,13 @@
+<%= turbo_frame_tag tweet do %>
+  <article class="tweet">
+    <p>
+      <%= tweet.id %> -
+      <%= tweet.body %>
+    </p>
+
+    <div class="actions">
+      <%= link_to "Edit", edit_tweet_path(tweet), class: "btn" %>
+      <%= button_to "Destroy", tweet, method: :delete, form: {data: {turbo_frame: "_top"}} %>
+    </div>
+  </article>
+<% end %>

@@ -1,0 +1,13 @@
+<%= turbo_stream_from :tweets %>
+
+<header>
+  <p class="tweets-count"><%= pluralize @tweets.size, "Tweet" %><p>
+  <h1>Tweets</h1>
+  <%= turbo_frame_tag "new_tweet", src: new_tweet_path %>
+</header>
+
+<section id="tweets">
+  <% @tweets.each do |tweet| %>
+    <%= render tweet %>
+  <% end %>
+</section>
