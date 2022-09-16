@@ -1,0 +1,16 @@
+button, input[type="submit"], .btn {
+  background-color: white;
+  border: var(--border-size-1) solid var(--blue-3);
+  border-radius: var(--radius-3);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-0);
+  margin: 0;
+  padding: var(--size-1) var(--size-3);
+  color: var(--blue-4);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button:hover, input[type="submit"]:hover, .btn:hover {
+  background-color: var(--blue-0);
+}

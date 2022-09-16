@@ -1,0 +1,9 @@
+body {
+  border: var(--border-size-1) solid var(--gray-3);
+  border-radius: var(--radius-3);
+  box-shadow: var(--shadow-3);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-1);
+  margin: var(--size-8) auto;
+  width: 40rem;
+}

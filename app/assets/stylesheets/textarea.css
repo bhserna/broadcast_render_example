@@ -1,0 +1,7 @@
+textarea {
+  width: 100%;
+  border: var(--border-size-1) solid var(--gray-4);
+  padding: var(--size-3);
+  margin: var(--size-2) 0;
+  font-size: var(--font-size-1);
+}

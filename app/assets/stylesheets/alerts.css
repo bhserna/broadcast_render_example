@@ -1,0 +1,7 @@
+.alert {
+  padding: var(--size-3);
+  background: var(--green-0);
+  border-top-left-radius:  var(--radius-3);
+  border-top-right-radius:  var(--radius-3);
+  color: var(--green-6);
+}
