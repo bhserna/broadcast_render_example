@@ -1,24 +1,22 @@
-# README
+# Broadcast render example
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an app to test how "broadcast render" from turbo_rails can be used to broadcast multiple turbo_streams and update more than one thing on the page, like when you need to:
 
-Things you may want to cover:
+* Add a new element, clean the form and update a counter
+* Or remove the element and also update the counter
 
-* Ruby version
+Like in this video: https://www.loom.com/share/b4cf7e331ca9489781e211e3cd484564
 
-* System dependencies
+## Where to broadcast?
 
-* Configuration
+Although the last code uses a Tweet::Broadcast module I don't want to propose that this is the way to do it. It is just there because is the last thing that I have tested.
 
-* Database creation
+For this use case you can broadcast from:
 
-* Database initialization
+* The controller
+* The model
+* An included module
 
-* How to run the test suite
+... and maybe there are other ways.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+If you want a recommendation, I would propose to start on the controller and just move the broadcast to the model if is needed. And then move the broadcast to a module/concern when you think that you need to clean the model/record.
